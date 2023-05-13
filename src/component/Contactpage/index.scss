@@ -1,17 +1,20 @@
 .main-conatiner{
     padding: 2rem;
-   // display: flex ;
+    display: flex ;
+    height :100vh;
+}
+.item-center{
+    justify-content: center;
 }
 .container-left{
-    padding: 3rem;
-    width :17%;
-    background-color: rgb(91, 65, 240);
-    height :100vh;
-    border-radius: 20px;
-    // text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // padding: 3rem;
+    // width :17%;
+    // background-color: rgb(91, 65, 240);
+    // height :100vh;
+    // border-radius: 20px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
 }
 hr.solid {
     border-top: 3px solid #bbb;
@@ -59,14 +62,6 @@ b{
     height :8rem;
     border-radius: 100%;
 }
-.vl {
-    border-left: 3px solid #dad5d5;
-    height: 550px;
-  }
-  .address{
-    padding-left: 1rem;
-  }
-  .geo-location{
-    text-align: right;
-    font-size: 12px;
+  .contain-center{
+    text-align : center
   }

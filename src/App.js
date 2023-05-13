@@ -1,21 +1,22 @@
 import Dashboard from './component/Dashboard/Dashboard';
-import DetailedView from './component/Profile/DetailedView';
-import Gallery from './component/Gallery/Gallery'
-import Post from './component/Post/Post'
-import Todo from './component/ToDo/Todo'
-import { Route,Routes } from 'react-router-dom';
+import ContactPage from './component/Contactpage/ContactPage';
+import { Router,Route,Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import './App.css';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  
+const client = new QueryClient()
+  const navigate = useNavigate()
   return (
     <div >
+      <QueryClientProvider client={client}>
       <Routes>
-        <Route path ='/' element = {<Dashboard />}/>
-        <Route path ='/profile' element = {<DetailedView />}/>
-        <Route path ='/post-page' element = {<Post />  }/>
-        <Route path ='/gallery' element = { <Gallery />}/>
-        <Route path ='/to-do' element = {<Todo />}/>
+        <Route path ='/chart-map' element = {<Dashboard />}/>
+        <Route path ='/' element = {<ContactPage />}/>
       </Routes>
+      </QueryClientProvider>
       
     </div>
   );
